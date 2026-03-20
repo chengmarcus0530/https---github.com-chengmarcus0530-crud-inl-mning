@@ -1,0 +1,17 @@
+{
+  "movies": [
+    {
+      "id": "b011",
+      "title": "123123123",
+      "year": 123123123,
+      "genre": "123123"
+    },
+    {
+      "id": "cc9a",
+      "title": "123123123",
+      "year": 123123132,
+      "genre": "123132"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

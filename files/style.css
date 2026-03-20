@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#centering {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: hsl(240, 22%, 15%);
+  color: white;
+}
+
+main {
+  padding: 40px;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.form-container {
+  background: rgb(47, 47, 79);
+  padding: 25px;
+  border-radius: 10px;
+  width: 300px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: rgb(162, 155, 254);
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-left: 15px;
+}
+
+button:hover {
+  background: rgb(162, 155, 254);
+}
+
+.list-container {
+  flex: 1;
+
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+    max-width: 600px;
+  background: rgb(64, 64, 119);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+
+  display: flex;
+  align-items: center;
+}
+
+.movie-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.movie-actions button:first-child {
+  background: rgb(255, 118, 117);
+}
+
+.movie-actions button:last-child {
+  background: lightgreen;
+}
