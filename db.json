@@ -1,4 +1,29 @@
 {
-  "movies": [],
+  "movies": [
+    {
+      "id": "9eb9",
+      "title": "marvel",
+      "year": 2006,
+      "genre": "action"
+    },
+    {
+      "id": "7e48",
+      "title": "spidoorman",
+      "year": 2002,
+      "genre": "action"
+    },
+    {
+      "id": "d7ef",
+      "title": "läderlappen",
+      "year": 2000,
+      "genre": "action"
+    },
+    {
+      "id": "f7c1",
+      "title": "avatar ",
+      "year": 2018,
+      "genre": "blå gubbar"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }
