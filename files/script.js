@@ -198,4 +198,37 @@ function restoreView(li, title, year, genre) {
   actionsDiv.appendChild(editBtn);
 }
 
+async function getMovieById(id) {
+  try {
+    const res = await fetch(`${apiUrl}/${id}`);
+    if (!res.ok) throw new Error("Ingen film hittades med det id:t");
+    const movie = await res.json();
+    return movie;
+  } catch (error) {
+    alert("Fel vid hämtning av film: " + error.message);
+  }
+}
+
+document.getElementById("searchForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const id = document.getElementById("searchId").value.trim();
+  const movie = await getMovieById(id);
+  if (movie) {
+    console.log(movie);
+
+    const popup = document.createElement("div");
+    popup.id = "searchPopup";
+    popup.textContent = `${movie.title} (${movie.year}) - ${movie.genre}`;
+
+    const closeBtn = createButton("Ta bort", "delete-btn");
+    closeBtn.onclick = () => popup.remove();
+    popup.appendChild(closeBtn);
+
+    const existing = document.getElementById("searchPopup");
+    if (existing) existing.remove();
+
+    document.getElementById("searchResult").appendChild(popup);
+  }
+});
+
 getMovies();
